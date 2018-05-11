@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: utility-pod
+spec:
+  containers:
+    - name: utility-pod
+      image: stellanetops/utility-pod:latest
+      command: [ "/bin/bash", "-c", "--" ]
+      args: [ "while true; do sleep 30; done;" ]
+      imagePullPolicy: Always
